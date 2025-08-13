@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SARL BRUNO MIRA - Entreprise BTP Hérault | Tous Corps d'État</title>
+  <meta name="description" content="SARL BRUNO MIRA, votre entreprise BTP de confiance dans l'Hérault. Gros œuvre, second œuvre, rénovation. Devis gratuit sous 48h. ☎️ 06.03.83.06.49" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SARL BRUNO MIRA - Entreprise BTP Hérault" />
+  <meta property="og:description" content="Votre entreprise BTP de confiance dans l'Hérault. Tous corps d'état, intervention sous 48h." />
+  <meta property="og:image" content="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" />
+  <meta property="og:url" content="https://sarl-bruno-mira.fr" />
+  <meta property="og:type" content="website" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SARL BRUNO MIRA - Entreprise BTP Hérault" />
+  <meta name="twitter:description" content="Votre entreprise BTP de confiance dans l'Hérault. Tous corps d'état, intervention sous 48h." />
+  <meta name="twitter:image" content="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" />
+
+  <!-- Favicon (placeholder 1x1) -->
+  <link
+    rel="icon"
+    type="image/x-icon"
+    href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+  />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#dc2626', // Rouge
+            secondary: '#1f2937' // Gris foncé
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SARL BRUNO MIRA",
+    "description": "Entreprise BTP spécialisée dans tous corps d'état dans l'Hérault",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1540 route de bel air",
+      "addressRegion": "Hérault",
+      "addressCountry": "FR"
+    },
+    "telephone": "+33603830649",
+    "email": "miracolor@aol.com",
+    "url": "https://sarl-bruno-mira.fr",
+    "image": "https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg",
+    "priceRange": "€€",
+    "openingHours": ["Mo-Fr 07:00-18:00","Sa 08:00-12:00"],
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {"@type": "GeoCoordinates","latitude": 43.6047, "longitude": 3.8806},
+      "geoRadius": 50000
+    },
+    "sameAs": [
+      "https://g.page/r/CbP6b2XKrSy2EBE",
+      "https://g.page/r/CbP6b2XKrSy2EBE/review"
+    ]
+  }
+  </script>
+
+  <style>
+    .hero-bg {
+      background: linear-gradient(135deg, rgba(220, 38, 38, 0.9), rgba(31, 41, 55, 0.8)),
+        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .smooth-scroll { scroll-behavior: smooth; }
+    .fade-in { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* Lightbox */
+    .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.9); z-index: 1000; justify-content: center; align-items: center; }
+    .lightbox.active { display: flex; }
+    .lightbox img { max-width: 90%; max-height: 90%; border-radius: 8px; }
+    .close-lightbox { position: absolute; top: 20px; right: 30px; color: #fff; font-size: 2rem; cursor: pointer; }
+    /* Focus visible for accessibility */
+    :focus { outline: none; }
+    :focus-visible { outline: 3px solid #dc2626; outline-offset: 2px; }
+  </style>
+</head>
+
+<body class="font-sans smooth-scroll">
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 bg-white text-secondary px-3 py-2 rounded shadow">Aller au contenu</a>
+
+  <!-- Header -->
+  <header class="fixed top-0 w-full bg-white shadow-lg z-50" role="banner">
+    <nav class="container mx-auto px-4 py-3" aria-label="Navigation principale">
+      <div class="flex justify-between items-center">
+        <a href="#hero" class="flex items-center" aria-label="Accueil">
+          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA Logo" class="h-12 w-auto" />
+        </a>
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-8">
+          <a href="#apropos" class="text-gray-700 hover:text-primary transition-colors">À propos</a>
+          <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
+          <a href="#realisations" class="text-gray-700 hover:text-primary transition-colors">Réalisations</a>
+          <a href="#avis" class="text-gray-700 hover:text-primary transition-colors">Avis</a>
+          <a href="#process" class="text-gray-700 hover:text-primary transition-colors">Process</a>
+          <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+        </div>
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
+        <a href="#apropos" class="block py-2 text-gray-700 hover:text-primary">À propos</a>
+        <a href="#services" class="block py-2 text-gray-700 hover:text-primary">Services</a>
+        <a href="#realisations" class="block py-2 text-gray-700 hover:text-primary">Réalisations</a>
+        <a href="#avis" class="block py-2 text-gray-700 hover:text-primary">Avis</a>
+        <a href="#process" class="block py-2 text-gray-700 hover:text-primary">Process</a>
+        <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="hero" class="hero-bg min-h-[88vh] flex items-center justify-center text-white pt-20">
+      <div class="container mx-auto px-4 text-center">
+        <h1 class="text-4xl lg:text-6xl font-bold mb-6 fade-in">Votre Entreprise BTP de Confiance dans l'Hérault</h1>
+        <p class="text-xl lg:text-2xl mb-8 fade-in">Tous corps d'état • Intervention sous 48h • Devis gratuit</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center fade-in">
+          <a href="#contact" class="bg-primary hover:bg-red-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Demander un devis gratuit</a>
+          <a href="tel:0603830649" class="bg-white hover:bg-gray-100 text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-colors">Appeler 06.03.83.06.49</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preuves -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div class="fade-in"><div class="bg-white p-6 rounded-lg shadow-lg">
+            <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+            <h3 class="font-semibold">Assurance Décennale</h3></div></div>
+          <div class="fade-in"><div class="bg-white p-6 rounded-lg shadow-lg">
+            <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L10 9.586V6z" clip-rule="evenodd"/></svg>
+            <h3 class="font-semibold">Intervention sous 48h</h3></div></div>
+          <div class="fade-in"><div class="bg-white p-6 rounded-lg shadow-lg">
+            <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <h3 class="font-semibold">Devis Gratuit</h3></div></div>
+          <div class="fade-in"><div class="bg-white p-6 rounded-lg shadow-lg">
+            <svg class="w-12 h-12 text-primary mx-auto mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/></svg>
+            <h3 class="font-semibold">Équipe Qualifiée</h3></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- À propos -->
+    <section id="apropos" class="py-20">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold mb-8 text-secondary fade-in">À propos de SARL BRUNO MIRA</h2>
+          <p class="text-lg text-gray-700 mb-8 fade-in">Forte de plus de 15 ans d'expérience dans le BTP, SARL BRUNO MIRA est votre partenaire de confiance pour tous vos projets de construction et de rénovation dans l'Hérault. Notre équipe de professionnels qualifiés vous garantit des travaux de qualité, dans le respect des délais et des normes de sécurité.</p>
+          <div class="grid md:grid-cols-3 gap-8 mt-12">
+            <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">15+</span></div><h3 class="font-semibold mb-2">Années d'expérience</h3><p class="text-gray-600">Un savoir-faire éprouvé</p></div>
+            <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">500+</span></div><h3 class="font-semibold mb-2">Projets</h3><p class="text-gray-600">Clients satisfaits</p></div>
+            <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">100%</span></div><h3 class="font-semibold mb-2">Satisfaction</h3><p class="text-gray-600">Votre sérénité d'abord</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Nos Services BTP</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Repeatable service card -->
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/></svg><h3 class="text-xl font-semibold mb-3">Gros Œuvre</h3><p class="text-gray-600">Fondations, murs porteurs, dalles, charpente. Construction neuve et extension.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h12a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1V8z" clip-rule="evenodd"/></svg><h3 class="text-xl font-semibold mb-3">Maçonnerie</h3><p class="text-gray-600">Murs en parpaings, briques, pierres. Cloisons et ouvertures.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/></svg><h3 class="text-xl font-semibold mb-3">Électricité</h3><p class="text-gray-600">Installation, mise aux normes, dépannage.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"/></svg><h3 class="text-xl font-semibold mb-3">Plomberie</h3><p class="text-gray-600">Sanitaire, chauffage, dépannage 24/7.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"/></svg><h3 class="text-xl font-semibold mb-3">Plaquisterie</h3><p class="text-gray-600">Cloisons sèches, faux plafonds, isolation.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4a1 1 0 000 2h14a1 1 0 100-2H3zM3 8a1 1 0 000 2h14a1 1 0 100-2H3zM3 12a1 1 0 100 2h14a1 1 0 100-2H3z"/></svg><h3 class="text-xl font-semibold mb-3">Carrelage</h3><p class="text-gray-600">Sol et mur, faïence, pierres naturelles.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4zM4 9a2 2 0 100 4h12a2 2 0 100-4H4zM4 15a2 2 0 100 4h12a2 2 0 100-4H4z"/></svg><h3 class="text-xl font-semibold mb-3">Peinture</h3><p class="text-gray-600">Intérieur/extérieur, enduits décoratifs, ravalement.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><h3 class="text-xl font-semibold mb-3">Menuiserie</h3><p class="text-gray-600">Ouvertures, volets, escaliers, sur-mesure.</p></div>
+          <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow fade-in"><svg class="w-12 h-12 text-primary mb-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"/></svg><h3 class="text-xl font-semibold mb-3">Rénovation Complète</h3><p class="text-gray-600">Cuisines & Salles de bains clé en main.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process -->
+    <section id="process" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Notre Process en 4 Étapes</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">1</span></div><h3 class="text-xl font-semibold mb-3">Visite & Étude</h3><p class="text-gray-600">Déplacement gratuit pour comprendre vos besoins.</p></div>
+          <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">2</span></div><h3 class="text-xl font-semibold mb-3">Devis Détaillé</h3><p class="text-gray-600">Proposition sous 48h avec planning transparent.</p></div>
+          <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">3</span></div><h3 class="text-xl font-semibold mb-3">Réalisation</h3><p class="text-gray-600">Travaux par nos équipes qualifiées.</p></div>
+          <div class="text-center fade-in"><div class="bg-primary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4"><span class="text-2xl font-bold">4</span></div><h3 class="text-xl font-semibold mb-3">Réception & Garantie</h3><p class="text-gray-600">Réception et garanties légales.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Réalisations -->
+    <section id="realisations" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Nos Réalisations</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Rénovation maison Hérault" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Rénovation Complète - Montpellier</h3></div>
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&w=800&q=80" alt="Extension maison Béziers" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Extension - Béziers</h3></div>
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=800&q=80" alt="Salle de bains moderne Sète" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Salle de Bains - Sète</h3></div>
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&q=80" alt="Cuisine moderne Agde" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Cuisine Moderne - Agde</h3></div>
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?auto=format&fit=crop&w=800&q=80" alt="Terrasse carrelée Pézenas" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Terrasse - Pézenas</h3></div>
+          <div class="fade-in cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=1200&q=80')"><img src="https://images.unsplash.com/photo-1572120360610-d971b9d7767c?auto=format&fit=crop&w=800&q=80" alt="Façade rénovée Clermont-l'Hérault" class="rounded-lg shadow-lg hover:shadow-xl transition-shadow w-full h-64 object-cover" loading="lazy" /><h3 class="text-lg font-semibold mt-4">Ravalement - Clermont-l'Hérault</h3></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Avis -->
+    <section id="avis" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Avis de nos Clients</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <!-- 3 testimonials -->
+          <div class="bg-white p-6 rounded-lg shadow-lg fade-in">
+            <div class="flex mb-4" aria-hidden="true">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-700 mb-4">"Excellent travail pour la rénovation de notre maison. Équipe professionnelle, délais respectés et finitions parfaites. Je recommande vivement !"</p>
+            <p class="font-semibold">Marie Dubois - Montpellier</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg fade-in">
+            <div class="flex mb-4" aria-hidden="true">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-700 mb-4">"Bruno et son équipe ont refait notre cuisine entièrement. Travail soigné, prix honnête et très bon contact. Merci !"</p>
+            <p class="font-semibold">Pierre Martin - Béziers</p>
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow-lg fade-in">
+            <div class="flex mb-4" aria-hidden="true">⭐⭐⭐⭐⭐</div>
+            <p class="text-gray-700 mb-4">"Intervention rapide pour un dépannage plomberie. Professionnel et efficace, je garde le contact pour mes futurs travaux."</p>
+            <p class="font-semibold">Sophie Laurent - Agde</p>
+          </div>
+        </div>
+        <div class="text-center mt-12 fade-in">
+          <a href="https://g.page/r/CbP6b2XKrSy2EBE" target="_blank" rel="noopener" class="bg-primary hover:bg-red-700 text-white px-8 py-3 rounded-lg font-semibold transition-colors">Voir notre fiche Google</a>
+          <a href="https://g.page/r/CbP6b2XKrSy2EBE/review" target="_blank" rel="noopener" class="inline-block ml-3 text-secondary underline hover:text-primary">Publier un avis</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Zone d'intervention -->
+    <section id="zone" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Zone d'Intervention</h2>
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+          <div class="fade-in">
+            <iframe title="Carte de l'Hérault" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92661.11853635626!2d3.7835836!3d43.6047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12b6af0725dd9db1%3A0xa1d6e4f5d4e8b8b!2sH%C3%A9rault%2C%20France!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="300" style="border:0; border-radius: 8px;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="fade-in">
+            <h3 class="text-2xl font-semibold mb-6">Principales villes desservies :</h3>
+            <div class="grid grid-cols-2 gap-4">
+              <ul class="space-y-2">
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Montpellier</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Béziers</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Sète</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Agde</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Pézenas</li>
+              </ul>
+              <ul class="space-y-2">
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Clermont-l'Hérault</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Lunel</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Frontignan</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Mauguio</li>
+                <li class="flex items-center"><span class="w-2 h-2 bg-primary rounded-full mr-2"></span>Et environs…</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-20">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Questions Fréquentes</h2>
+        <div class="max-w-4xl mx-auto space-y-6">
+          <!-- FAQ item template -->
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Proposez-vous des devis gratuits ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Oui, devis gratuits et sans engagement. Un professionnel se déplace et vous remet une proposition détaillée sous 48h.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Quels sont vos délais d'intervention ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Urgences sous 48h. Pour les chantiers, le planning est défini au devis selon l'ampleur des travaux.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Êtes-vous assurés et certifiés ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Oui, responsabilité civile et décennale. Attestations disponibles sur demande.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Particuliers et professionnels ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Oui, nous intervenons pour particuliers, entreprises, syndics et collectivités.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Facilités de paiement ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Paiements échelonnés possibles selon l'avancement. Étude au cas par cas pour les gros projets.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Quelles garanties appliquez-vous ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Parfait achèvement (1 an), bon fonctionnement (2 ans), décennale (10 ans) selon les travaux.</p></div>
+          </div>
+          <div class="bg-white rounded-lg shadow-lg fade-in">
+            <button class="faq-button w-full px-6 py-4 text-left font-semibold text-lg hover:bg-gray-50 flex justify-between items-center">
+              <span>Fournissez-vous les matériaux ?</span>
+              <svg class="w-5 h-5 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="faq-content hidden px-6 pb-4"><p class="text-gray-700">Oui, via nos partenaires. Possible aussi d'utiliser vos matériaux.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-16 text-secondary fade-in">Contactez-nous</h2>
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-2 gap-12">
+          <!-- Form -->
+          <div class="fade-in">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+              <h3 class="text-2xl font-semibold mb-6">Demander un devis gratuit</h3>
+              <form id="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="company" class="hidden" tabindex="-1" autocomplete="off" />
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="nom" class="block text-sm font-medium text-gray-700 mb-2">Nom *</label>
+                    <input id="nom" name="nom" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label for="prenom" class="block text-sm font-medium text-gray-700 mb-2">Prénom *</label>
+                    <input id="prenom" name="prenom" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                    <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                  <div>
+                    <label for="telephone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone *</label>
+                    <input type="tel" id="telephone" name="telephone" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" />
+                  </div>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4 mb-4">
+                  <div>
+                    <label for="type-travaux" class="block text-sm font-medium text-gray-700 mb-2">Type de travaux</label>
+                    <select id="type-travaux" name="type-travaux" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                      <option value="">Sélectionnez</option>
+                      <option>Gros œuvre</option><option>Maçonnerie</option><option>Électricité</option><option>Plomberie</option><option>Plaquisterie</option><option>Carrelage</option><option>Peinture</option><option>Menuiserie</option><option>Rénovation complète</option><option>Autre</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Budget approximatif</label>
+                    <select id="budget" name="budget" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent">
+                      <option value="">Sélectionnez</option>
+                      <option>Moins de 5 000 €</option><option>5 000 - 15 000 €</option><option>15 000 - 30 000 €</option><option>30 000 - 50 000 €</option><option>Plus de 50 000 €</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Décrivez votre projet *</label>
+                  <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent" placeholder="Décrivez votre projet, vos besoins, contraintes…"></textarea>
+                </div>
+                <div class="mb-6">
+                  <label class="flex items-start"><input type="checkbox" name="rgpd" required class="mt-1 mr-3" /><span class="text-sm text-gray-700">J'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande. <a href="#politique-confidentialite" class="text-primary hover:underline">Voir notre politique de confidentialité</a></span></label>
+                </div>
+                <button type="submit" class="w-full bg-primary hover:bg-red-700 text-white font-semibold py-4 px-6 rounded-lg transition-colors">Envoyer ma demande</button>
+              </form>
+            </div>
+          </div>
+          <!-- Coordonnées -->
+          <div class="fade-in">
+            <div class="bg-white p-8 rounded-lg shadow-lg h-fit">
+              <h3 class="text-2xl font-semibold mb-6">Nos coordonnées</h3>
+              <div class="space-y-6">
+                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg><div><h4 class="font-semibold">Téléphone</h4><a href="tel:0603830649" class="text-primary hover:underline text-lg">06.03.83.06.49</a><p class="text-gray-600 text-sm">Disponible 7j/7 pour urgences</p></div></div>
+                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg><div><h4 class="font-semibold">Email</h4><a href="mailto:miracolor@aol.com" class="text-primary hover:underline">miracolor@aol.com</a><p class="text-gray-600 text-sm">Réponse sous 24h</p></div></div>
+                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><div><h4 class="font-semibold">Adresse</h4><p>1540 route de bel air</p><p class="text-gray-600">Hérault (34)</p></div></div>
+                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L10 9.586V6z" clip-rule="evenodd"/></svg><div><h4 class="font-semibold">Horaires</h4><p>Lundi - Vendredi : 7h - 18h</p><p>Samedi : 8h - 12h</p><p class="text-gray-600 text-sm">Dimanche : Urgences uniquement</p></div></div>
+              </div>
+              <div class="mt-8 pt-8 border-t border-gray-200 flex gap-3 flex-wrap">
+                <a href="https://g.page/r/CbP6b2XKrSy2EBE" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">Voir la fiche Google</a>
+                <a href="https://g.page/r/CbP6b2XKrSy2EBE/review" target="_blank" rel="noopener" class="bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-lg transition-colors">Publier un avis</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-secondary text-white py-12" role="contentinfo">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-4 gap-8">
+        <div>
+          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA" class="h-12 w-auto mb-4" />
+          <p class="text-gray-300 mb-4">Votre entreprise BTP de confiance dans l'Hérault depuis plus de 15 ans.</p>
+          <div class="flex space-x-4" aria-label="Contact rapide">
+            <a href="tel:0603830649" class="text-gray-300 hover:text-primary transition-colors" aria-label="Appeler"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg></a>
+            <a href="mailto:miracolor@aol.com" class="text-gray-300 hover:text-primary transition-colors" aria-label="Envoyer un email"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Services</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li><a href="#services" class="hover:text-primary transition-colors">Gros œuvre</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors">Maçonnerie</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors">Électricité</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors">Plomberie</a></li>
+            <li><a href="#services" class="hover:text-primary transition-colors">Rénovation</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Zone d'intervention</h3>
+          <ul class="space-y-2 text-gray-300">
+            <li>Montpellier</li><li>Béziers</li><li>Sète</li><li>Agde</li><li>Tout l'Hérault</li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact</h3>
+          <div class="space-y-2 text-gray-300">
+            <p>1540 route de bel air</p>
+            <p>Hérault (34)</p>
+            <a href="tel:0603830649" class="block hover:text-primary transition-colors">06.03.83.06.49</a>
+            <a href="mailto:miracolor@aol.com" class="block hover:text-primary transition-colors">miracolor@aol.com</a>
+          </div>
+        </div>
+      </div>
+      <hr class="border-gray-600 my-8" />
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <p class="text-gray-300 text-sm mb-4 md:mb-0">© 2025 SARL BRUNO MIRA. Tous droits réservés.</p>
+        <div class="flex space-x-6">
+          <a href="#mentions-legales" class="text-gray-300 hover:text-primary text-sm transition-colors">Mentions légales</a>
+          <a href="#politique-confidentialite" class="text-gray-300 hover:text-primary text-sm transition-colors">Politique de confidentialité</a>
+          <a href="#cgv" class="text-gray-300 hover:text-primary text-sm transition-colors">CGV</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Agrandissement de l'image">
+    <button class="close-lightbox" aria-label="Fermer" onclick="closeLightbox()">&times;</button>
+    <img id="lightbox-img" src="" alt="Aperçu réalisation" />
+  </div>
+
+  <!-- Scripts -->
+  <script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    mobileMenuBtn.addEventListener('click', () => {
+      const expanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', String(!expanded));
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Smooth anchor close mobile menu
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          mobileMenu.classList.add('hidden');
+          mobileMenuBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Lightbox
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    function openLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+    }
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightboxImg.src = '';
+    }
+    window.openLightbox = openLightbox;
+    window.closeLightbox = closeLightbox;
+
+    // FAQ toggles
+    document.querySelectorAll('.faq-button').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const content = btn.parentElement.querySelector('.faq-content');
+        const icon = btn.querySelector('svg');
+        const hidden = content.classList.contains('hidden');
+        document.querySelectorAll('#faq .faq-content').forEach(c => c.classList.add('hidden'));
+        document.querySelectorAll('#faq .faq-button svg').forEach(i => i.style.transform = '');
+        if (hidden) {
+          content.classList.remove('hidden');
+          icon.style.transform = 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Formspree basic success message (optional UX)
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(){
+      // Let Formspree handle submission; you can replace with EmailJS if preferred
+    });
+  </script>
+</body>
+</html>
