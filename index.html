@@ -110,6 +110,20 @@
     :focus-visible { outline: 3px solid #dc2626; outline-offset: 2px; }
     .dark .text-gray-700 { color: #d1d5db; }
     .dark .text-gray-600 { color: #9ca3af; }
+    button,
+    a[class*="bg-primary"] {
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    button:hover,
+    a[class*="bg-primary"]:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    }
+    button:active,
+    a[class*="bg-primary"]:active {
+      transform: translateY(0);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
   </style>
 </head>
 
