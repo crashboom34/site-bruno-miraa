@@ -441,13 +441,53 @@
           </div>
           <!-- Coordonnées -->
           <div class="fade-in">
-            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg h-fit">
-              <h3 class="text-2xl font-semibold mb-6">Nos coordonnées</h3>
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg h-fit">
+              <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-gray-100 border-b border-gray-200 pb-3">Nos coordonnées</h3>
               <div class="space-y-6">
-                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg><div><h4 class="font-semibold">Téléphone</h4><a href="tel:0603830649" class="text-primary hover:underline text-lg">06.03.83.06.49</a><p class="text-gray-600 text-sm">Disponible 7j/7 pour urgences</p></div></div>
-                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg><div><h4 class="font-semibold">Email</h4><a href="mailto:miracolor@aol.com" class="text-primary hover:underline">miracolor@aol.com</a><p class="text-gray-600 text-sm">Réponse sous 24h</p></div></div>
-                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg><div><h4 class="font-semibold">Adresse</h4><p>1540 route de bel air</p><p class="text-gray-600">Hérault (34)</p></div></div>
-                <div class="flex items-start"><svg class="w-6 h-6 text-primary mt-1 mr-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L10 9.586V6z" clip-rule="evenodd"/></svg><div><h4 class="font-semibold">Horaires</h4><p>Lundi - Vendredi : 7h - 18h</p><p>Samedi : 8h - 12h</p><p class="text-gray-600 text-sm">Dimanche : Urgences uniquement</p></div></div>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="font-semibold">Téléphone</h4>
+                    <a href="tel:0603830649" class="text-primary hover:underline text-lg">06.03.83.06.49</a>
+                    <p class="text-gray-600 text-sm">Disponible 7j/7 pour urgences</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="font-semibold">Email</h4>
+                    <a href="mailto:miracolor@aol.com" class="text-primary hover:underline">miracolor@aol.com</a>
+                    <p class="text-gray-600 text-sm">Réponse sous 24h</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="font-semibold">Adresse</h4>
+                    <p>1540 route de bel air</p>
+                    <p class="text-gray-600">Hérault (34)</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <span class="flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white flex-shrink-0">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L10 9.586V6z" clip-rule="evenodd"/></svg>
+                  </span>
+                  <div>
+                    <h4 class="font-semibold">Horaires</h4>
+                    <p>Lundi - Vendredi : 7h - 18h</p>
+                    <p>Samedi : 8h - 12h</p>
+                    <p class="text-gray-600 text-sm">Dimanche : Urgences uniquement</p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-8 rounded-lg overflow-hidden aspect-w-16 aspect-h-9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.887356001995!2d3.8806!3d43.6047!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM2JzE2LjkiTiAzwrA1MScyMC4yIkU!5e0!3m2!1sfr!2sfr!4v0000000000000" class="w-full h-full border-0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation de l'entreprise"></iframe>
               </div>
               <div class="mt-8 pt-8 border-t border-gray-200 flex gap-3 flex-wrap">
                 <a href="https://g.page/r/CbP6b2XKrSy2EBE" target="_blank" rel="noopener" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors">Voir la fiche Google</a>
