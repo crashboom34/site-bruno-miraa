@@ -26,10 +26,22 @@
     href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
   />
 
+  <script>
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  </script>
+
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
+      darkMode: 'class',
       theme: {
         extend: {
           colors: {
@@ -96,41 +108,46 @@
     /* Focus visible for accessibility */
     :focus { outline: none; }
     :focus-visible { outline: 3px solid #dc2626; outline-offset: 2px; }
+    .dark .text-gray-700 { color: #d1d5db; }
+    .dark .text-gray-600 { color: #9ca3af; }
   </style>
 </head>
 
-<body class="font-sans smooth-scroll">
+<body class="font-sans smooth-scroll bg-white text-secondary dark:bg-secondary dark:text-gray-100">
   <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 bg-white text-secondary px-3 py-2 rounded shadow">Aller au contenu</a>
 
   <!-- Header -->
-  <header class="fixed top-0 w-full bg-white shadow-lg z-50" role="banner">
+  <header class="fixed top-0 w-full bg-white dark:bg-secondary dark:text-gray-100 shadow-lg z-50" role="banner">
     <nav class="container mx-auto px-4 py-3" aria-label="Navigation principale">
       <div class="flex justify-between items-center">
         <a href="#hero" class="flex items-center" aria-label="Accueil">
-          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA Logo" class="h-12 w-auto" />
+          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA Logo" class="h-12 w-auto" loading="lazy" />
         </a>
         <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-8">
-          <a href="#apropos" class="text-gray-700 hover:text-primary transition-colors">À propos</a>
-          <a href="#services" class="text-gray-700 hover:text-primary transition-colors">Services</a>
-          <a href="#realisations" class="text-gray-700 hover:text-primary transition-colors">Réalisations</a>
-          <a href="#avis" class="text-gray-700 hover:text-primary transition-colors">Avis</a>
-          <a href="#process" class="text-gray-700 hover:text-primary transition-colors">Process</a>
-          <a href="#contact" class="text-gray-700 hover:text-primary transition-colors">Contact</a>
+          <a href="#apropos" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">À propos</a>
+          <a href="#services" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">Services</a>
+          <a href="#realisations" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">Réalisations</a>
+          <a href="#avis" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">Avis</a>
+          <a href="#process" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">Process</a>
+          <a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors dark:text-gray-300">Contact</a>
         </div>
-        <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
-        </button>
+        <div class="flex items-center space-x-4">
+          <button id="theme-toggle" aria-label="Changer de thème" class="text-gray-700 hover:text-primary transition-colors dark:text-gray-300">🌙</button>
+          <!-- Mobile Menu Button -->
+          <button id="mobile-menu-btn" class="lg:hidden" aria-expanded="false" aria-controls="mobile-menu" aria-label="Menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+          </button>
+        </div>
       </div>
       <!-- Mobile Menu -->
       <div id="mobile-menu" class="lg:hidden hidden mt-4 pb-4">
-        <a href="#apropos" class="block py-2 text-gray-700 hover:text-primary">À propos</a>
-        <a href="#services" class="block py-2 text-gray-700 hover:text-primary">Services</a>
-        <a href="#realisations" class="block py-2 text-gray-700 hover:text-primary">Réalisations</a>
-        <a href="#avis" class="block py-2 text-gray-700 hover:text-primary">Avis</a>
-        <a href="#process" class="block py-2 text-gray-700 hover:text-primary">Process</a>
-        <a href="#contact" class="block py-2 text-gray-700 hover:text-primary">Contact</a>
+        <a href="#apropos" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">À propos</a>
+        <a href="#services" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">Services</a>
+        <a href="#realisations" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">Réalisations</a>
+        <a href="#avis" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">Avis</a>
+        <a href="#process" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">Process</a>
+        <a href="#contact" class="nav-link block py-2 text-gray-700 hover:text-primary dark:text-gray-300">Contact</a>
       </div>
     </nav>
   </header>
@@ -434,7 +451,7 @@
     <div class="container mx-auto px-4">
       <div class="grid md:grid-cols-4 gap-8">
         <div>
-          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA" class="h-12 w-auto mb-4" />
+          <img src="https://i.postimg.cc/8zMWKzJB/bruno-banner-01.jpg" alt="SARL BRUNO MIRA" class="h-12 w-auto mb-4" loading="lazy" />
           <p class="text-gray-300 mb-4">Votre entreprise BTP de confiance dans l'Hérault depuis plus de 15 ans.</p>
           <div class="flex space-x-4" aria-label="Contact rapide">
             <a href="tel:0603830649" class="text-gray-300 hover:text-primary transition-colors" aria-label="Appeler"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg></a>
@@ -534,6 +551,33 @@
     }
     window.openLightbox = openLightbox;
     window.closeLightbox = closeLightbox;
+
+    // Active link highlighting
+    const sections = document.querySelectorAll('main section[id]');
+    const navLinks = document.querySelectorAll('nav .nav-link');
+    const activeObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('text-primary', link.getAttribute('href') === `#${entry.target.id}`);
+          });
+        }
+      });
+    }, { threshold: 0.6 });
+    sections.forEach(section => activeObserver.observe(section));
+
+    // Theme toggle
+    const themeToggle = document.getElementById('theme-toggle');
+    function updateThemeIcon() {
+      themeToggle.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙';
+    }
+    themeToggle.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.theme = isDark ? 'dark' : 'light';
+      updateThemeIcon();
+    });
+    updateThemeIcon();
 
     // FAQ toggles
     document.querySelectorAll('.faq-button').forEach(btn => {
