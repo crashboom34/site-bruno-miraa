@@ -1,18 +1,102 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8">
-  <title>Merci – Demande de devis envoyée</title>
-  <meta name="robots" content="noindex">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Merci — Demande reçue | SARL BRUNO MIRA</title>
+  <meta name="robots" content="noindex" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Barlow+Condensed:wght@700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{--brand:#dc2626}
+    body{font-family:'Inter',system-ui,sans-serif;background:#070d18;color:#f1f5f9;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+
+    .card{
+      background:#0f172a;border:1px solid rgba(255,255,255,.08);border-radius:24px;
+      padding:3rem 2.5rem;max-width:520px;width:100%;text-align:center;
+      box-shadow:0 32px 80px rgba(0,0,0,.5);
+    }
+
+    .check-ring{
+      width:80px;height:80px;border-radius:50%;margin:0 auto 1.5rem;
+      display:flex;align-items:center;justify-content:center;
+      background:rgba(220,38,38,.12);border:2px solid rgba(220,38,38,.25);
+      animation:pop .5s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
+
+    .check-icon{
+      width:40px;height:40px;stroke:#dc2626;stroke-width:2.5;fill:none;
+      stroke-dasharray:60;stroke-dashoffset:60;
+      animation:draw .5s .35s ease forwards;
+    }
+    @keyframes draw{to{stroke-dashoffset:0}}
+
+    h1{font-family:'Barlow Condensed',sans-serif;font-size:2.5rem;font-weight:800;line-height:1.1;margin-bottom:.75rem;color:#fff}
+
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:.5rem;
+      background:#dc2626;color:#fff;font-weight:700;padding:.875rem 2rem;border-radius:10px;
+      text-decoration:none;transition:background .2s,transform .2s,box-shadow .2s;
+      margin-top:1.5rem;
+    }
+    .btn:hover{background:#a01515;transform:translateY(-2px);box-shadow:0 8px 24px rgba(220,38,38,.35)}
+    .btn-ghost{
+      display:inline-flex;align-items:center;gap:.5rem;color:#64748b;font-size:.875rem;
+      text-decoration:none;margin-top:1rem;transition:color .2s;
+    }
+    .btn-ghost:hover{color:#f1f5f9}
+
+    .info-row{
+      display:flex;align-items:center;gap:.75rem;padding:.875rem 1rem;
+      background:rgba(255,255,255,.04);border-radius:10px;text-align:left;
+    }
+    .info-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;background:rgba(220,38,38,.1)}
+  </style>
 </head>
 <body>
-  <h1>Merci ! Votre demande de devis a bien été envoyée ✅</h1>
-  <p>Nous vous recontactons très vite.</p>
+  <div class="card">
+    <div class="check-ring" aria-hidden="true">
+      <svg class="check-icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
 
-  <!-- Counter.dev (analytics sans cookies) -->
-  <script src="https://cdn.counter.dev/script.js"
-          data-id="156b8a98-8c71-4b3e-a8d5-de3547a2e7db"
-          data-utcoffset="1"></script>
-  <!-- /Counter.dev -->
+    <h1>Demande reçue !</h1>
+    <p style="color:#94a3b8;margin-bottom:2rem;line-height:1.6">Merci, votre demande de devis a bien été envoyée. Nous vous recontacterons <strong style="color:#f1f5f9">sous 48h</strong> pour donner suite à votre projet.</p>
+
+    <div style="display:flex;flex-direction:column;gap:.75rem;margin-bottom:.5rem">
+      <div class="info-row">
+        <div class="info-icon">
+          <svg class="w-4 h-4" style="color:#dc2626;width:18px;height:18px" fill="currentColor" viewBox="0 0 20 20"><path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/></svg>
+        </div>
+        <div>
+          <p style="font-size:.75rem;color:#64748b;margin-bottom:.125rem">Besoin urgent ?</p>
+          <a href="tel:0603830649" style="color:#dc2626;font-weight:700;text-decoration:none;font-size:1.125rem">06.03.83.06.49</a>
+        </div>
+      </div>
+      <div class="info-row">
+        <div class="info-icon">
+          <svg style="color:#dc2626;width:18px;height:18px" fill="currentColor" viewBox="0 0 20 20"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/></svg>
+        </div>
+        <div>
+          <p style="font-size:.75rem;color:#64748b;margin-bottom:.125rem">Email</p>
+          <a href="mailto:miracolor@aol.com" style="color:#dc2626;font-weight:600;text-decoration:none">miracolor@aol.com</a>
+        </div>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn">
+      <svg style="width:18px;height:18px" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+      Retour à l'accueil
+    </a>
+    <br />
+    <a href="https://g.page/r/CbP6b2XKrSy2EBE/review" target="_blank" rel="noopener" class="btn-ghost">
+      Laisser un avis Google →
+    </a>
+  </div>
+
+  <!-- Counter.dev analytics -->
+  <script src="https://cdn.counter.dev/script.js" data-id="156b8a98-8c71-4b3e-a8d5-de3547a2e7db" data-utcoffset="1"></script>
 </body>
 </html>
